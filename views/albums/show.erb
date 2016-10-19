@@ -1,3 +1,10 @@
 <h1>Selected Album: <%= @album.name %> by <%= @album.artist.name %>.</h1>
 
-<a href="/albums">All Albums</a>
+<!-- <a href="/albums">All Albums</a> -->
+
+<a href="/albums/<%= @album.id %>/edit">Edit Album</a>
+<p></p>
+<form action="/albums/<%= @album.id %>" method="post">
+  <input type="submit" value="Delete">
+  <input name="_method" type="hidden" value="delete"/>
+</form>
