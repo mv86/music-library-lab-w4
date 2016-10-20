@@ -22,7 +22,7 @@ end
 
 get '/albums/:id/edit' do
   @album = Album.find(params[:id])
-  erb(:'artists/edit')
+  erb(:'albums/edit')
 end
 
 put '/albums/:id' do
